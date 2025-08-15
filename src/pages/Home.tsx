@@ -1,6 +1,9 @@
 import Logo from "../assets/SGA.png";
 import Linkedin from "../assets/linkedin.svg";
 import Instagram from "../assets/instragram.svg";
+import Roadmap from "../assets/Roadmap Icon.png";
+import Analytic from "../assets/Analytic Icon.png";
+import Company from "../assets/Company Icon.png";
 
 export default function Home() {
   return (
@@ -121,10 +124,71 @@ export default function Home() {
         <hr className="border-white border-1 mt-10 mb-10 w-240 mx-auto" />
         <div>
           <p className="text-white text-6xl">Product</p>
-          <div className="flex justify-center gap-5 mt-10">
-            <div className="border-white border-1 rounded-4xl h-120 w-60"></div>
-            <div className="border-white border-1 rounded-4xl h-120 w-60"></div>
-            <div className="border-white border-1 rounded-4xl h-120 w-60"></div>
+          <div className="flex flex-col items-center gap-8 mt-10">
+            <div className="p-8 w-240 border-white border-2 rounded-2xl flex items-center pl-3">
+              <div className="w-4/10 h-28 bg-gray-200 rounded-3xl ">
+                <img
+                  src={Roadmap}
+                  className="h-full mx-auto"
+                  alt="image of a roadmap"
+                />
+              </div>
+              <div className="text-start pl-5">
+                <p className="text-2xl font-bold text-white ">
+                  Competitive Benchmarking Across Industries
+                </p>
+                <p className="text-md text-white">
+                  An intelligent system that compares your resume with a large
+                  pool of accomplished professionals in your chosen field,
+                  identifying where you fall short. It then tailors
+                  recommendations for specific companies and roles, whether
+                  you’re in tech, healthcare, finance, or beyond.
+                </p>
+              </div>
+            </div>
+            <div className="py-8 w-240 border-white border-2 rounded-2xl flex items-center flex-row-reverse pr-3">
+              <div className="w-4/10 h-28 bg-gray-200 rounded-3xl">
+                <img
+                  src={Analytic}
+                  className="h-9/10 mx-auto pt-2"
+                  alt="image of a roadmap"
+                />
+              </div>
+              <div className="text-start px-5">
+                <p className="text-2xl font-bold text-white ">
+                  Company-Specific Resume Optimization
+                </p>
+                <p className="text-md text-white">
+                  A multi-industry platform that analyzes your resume’s
+                  strengths and weaknesses relative to top professionals, and
+                  optimizes it for different companies’ requirements. By
+                  learning from thousands of successful resumes, it helps you
+                  position yourself as a top candidate, regardless of your
+                  field.
+                </p>
+              </div>
+            </div>
+            <div className="w-240 p-8  border-white border-2 rounded-2xl flex items-center pl-3">
+              <div className="w-4/10 h-28 bg-gray-200 rounded-3xl ">
+                <img
+                  src={Company}
+                  className="h-full mx-auto"
+                  alt="image of a roadmap"
+                />
+              </div>
+              <div className="text-start px-5">
+                <p className="text-2xl font-bold text-white ">
+                  Skill Gap Analysis & Career Growth
+                </p>
+                <p className="text-md text-white ">
+                  A tool that evaluates your resume against those of highly
+                  experienced professionals, pinpointing specific skill gaps and
+                  improvement areas. It helps you create a targeted roadmap to
+                  strengthen your profile, making you more competitive in any
+                  industry—not just computer science or IT.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <hr className="border-white border-1 mt-10 mb-10 w-240 mx-auto" />
@@ -140,12 +204,14 @@ export default function Home() {
         <div className="mx-auto w-240">
           <p className="text-white text-6xl">Contact us :</p>
           <form name="Email" className="mt-10 flex flex-col align-middle">
+            <label className="text-start pb-4">Your Email: </label>
             <input
               className="bg-white h-13 w-5/10 rounded-3xl mb-10 text-black pl-5 ml-5"
               type="email"
               name="email"
               placeholder="example@gmail.com"
             />
+            <label className="text-start pb-4">Description: </label>
             <textarea
               placeholder="enter your descriptions here. . ."
               className="bg-white text-black p-5 ml-5 rounded-2xl h-30"
@@ -156,7 +222,7 @@ export default function Home() {
               type="button"
               className="p-4 rounded-3xl bg-teal-800 text-white active:rounded-4xl hover:bg-teal-500 w-30 h-15 mt-5 ml-5"
             >
-              Sent me
+              Send
             </button>
           </form>
         </div>
